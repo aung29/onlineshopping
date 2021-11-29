@@ -1,0 +1,604 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../resources/img/fruitCover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_container {
+    width: 80%;
+    min-height: 85vh;
+    top: 14vh;
+    left: 10%;
+    background-color: rgb(0,0,0,0.5);
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
+.left_container{
+    width: 65%;
+    min-height: 80vh;
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
+}
+.right_container{
+    width: 350px;
+    height:80vh;
+    background-color:#C7F19C ;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.left_container .shopName{
+    position: absolute;
+    left: 4%;
+    top: 2%;
+    font-family: Racing Sans One;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+}
+
+.left_container .deliInfo{
+    font-weight: bold;
+    font-style: normal;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+
+    margin: 20px 0;
+}
+
+.container{
+    /*background-color: orange;*/
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    width: 50%;
+    height: 100%;
+}
+.paymethod{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.infoForm{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input-container{
+    width: 90%;
+    display: flex;
+}
+
+.label{
+    display: block;
+    width: 30%;
+    color: #FFFFFF;
+}
+
+.boxStyle{
+    display: block;
+    width: 65%;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Red Hat Text';
+    font-size: 1rem;
+    outline: 0;
+}
+
+.fill{
+    border: 3px solid red;
+}
+
+.payInfo{
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    color: white;
+    margin-bottom: 20px;
+}
+.cardMethod{
+    width: 300px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+}
+.cardPic{
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    margin-left: 40px;
+    background-color: black;
+}
+.cardPic1{
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    margin-left: 120px;
+    background-color: black;
+}
+.cardPic2{
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    margin-left:200px;
+    background-color: black;
+}
+.payForm{
+    height: 38%;
+    border-radius: 20px;
+    background-color:white;
+}
+.cardNum{
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    margin: 10px 0 10px 10px;
+    color: black;
+}
+.cardBox{
+    width: 70%;
+    height: 20%;
+    border-radius: 10px;
+    /*border: none;*/
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: normal;
+    outline: 0;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.dateBox{
+    width: 90%;
+    height: 43%;
+    margin: 10px 0 10px 10px;
+    display: flex;
+    flex-direction: row;
+}
+.leftBox{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.rightBox{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.expiry{
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 10px;
+}
+.cvv{
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 10px;
+}
+.expiryBox{ 
+    width: 80%;
+    height: 40%;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: normal;
+}
+.cvvBox{ 
+    width: 80%;
+    height: 40%;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: normal;
+    box-shadow: greenyellow 2px 2px 2px;
+}
+.grpPic{
+    height: 13%;
+    margin-top: 30px;
+}
+
+.itemBoxContainer{
+    width: 100%;
+    height: 50%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.itemBox{
+    width: 90%;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 12px;
+    padding: 10px 5px;
+}
+.itemImg{
+    width: 45px;
+    background-color:white;
+}
+
+.itemCode{
+    width: 70px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+   
+}
+
+.priceBox{
+    width: 100%;
+    height: 18%;
+    border-bottom: 2px dotted black;
+    border-top: 2px dotted black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.subtotal{
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.deliFee{
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+}
+.priceName{
+    width: 50%;
+    height: 20px;
+}
+.deliName{
+    width: 50%;
+    height: 20px;
+}
+.priceAmount{
+    width: 50%;
+    height: 20px;
+
+}
+.deliAmount{
+    width: 50%;
+    height: 20px;
+}
+.total{
+    width: 100%;
+    height: 5%;
+    margin-top:2%;
+    text-align: center;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.btnBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.orderbtn{
+    width: 200px !important;
+    background-color: #FFFFFF !important;
+}
+
+.cancelbtn{
+    background-color: red !important;
+    color: #ffffff !important;
+}
+
+.btn{
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    border-radius: 20px !important;
+    padding: 10px 20px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+}
+
+.rating-container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+#ratingBox {
+    width: 600px;
+    height: 400px;
+    background-color: #d1f5ae;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    display: none;
+}
+
+.forms{
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+}
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0);
+    display: none;
+}
+
+.complete{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0);
+    display: none;
+}
+
+.complete h4{
+    margin-bottom: 50px;
+}
+
+.survey{
+    display: none;
+    padding: 50px 20px;
+}
+
+.survey h6{
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.survey.ani{
+    display: block;
+    animation: aniup 1s linear forwards;
+}
+
+.survey span{
+    display: block;
+}
+
+.survey span:first-child{
+    display: inline;
+}
+
+.survey span:nth-of-type(2){
+    margin-bottom: 20px;
+}
+
+.next{
+    margin-top: 20px;
+}
+.feedbackform{
+    padding: 30px 10px;
+    display: none;
+}
+
+.feedbackform.ani{
+    display: block;
+    animation: aniup 1s linear forwards;
+}
+
+.response{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.response.ani{
+    display: flex;
+    animation: aniup 1s linear forwards;
+}
+
+@keyframes aniup {
+    from{
+        transform: translateY(100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main_container { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+    }
+    .left_container{
+        width: 100%;
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .right_container{
+        width:100%;
+        height:70vh;
+        top: 0;
+       
+    }
+    .left_container .shopName{
+        position: absolute;
+        width: 50%;
+        top: 1%;
+        font-size: 25px;
+    }
+    .left_container .deliInfo{
+        position: absolute;
+        width: 50%;
+        height: 4%;
+        top: 6%;
+        left: 12%;
+        font-size: 20px;    
+    }
+
+    .infoForm{
+    
+        width: 100%;
+        margin-top: 30px;
+    }
+    .boxStyle{
+        width: 90%;
+        height: 30px;
+        margin-left: 80px;
+        margin-top: 10px;
+        padding-left: 20px;
+        font-size: 13px;
+        box-shadow: greenyellow 1px 1px 1px;
+    }
+    .boxStyle1{
+        width: 100%;
+        height: 26%;
+        margin-left: 80px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-top: 5px;
+        font-size: 13px;
+        box-shadow: greenyellow 1px 1px 1px;
+    }
+    .payInfo{
+        position: absolute;
+        width: 50%;
+        height: 4%;
+        top: 49%;
+        left: 12%;
+        font-size: 20px;    
+    }
+    .cardMethod{
+        position: absolute;
+        width: 300px;
+        height: 60px;
+        top: 54%;
+        left: 14%;
+        display: flex;
+        flex-direction: row;
+
+    }
+    .payForm{
+        
+        width: 80%;
+        height: 200px;
+        top: 62%;
+        left: 10%;
+
+    }
+    .cardNum{
+        
+        font-size: 15px;
+        margin-top:5%;
+        margin-left: 5%;
+    }
+    .cardBox{
+        width: 70%;
+        height: 30px;
+        margin-left: 50px;
+        margin-top: 10px;
+        padding-left: 10px;
+        box-shadow: greenyellow 1px 1px 1px;
+    }
+
+    .leftBox{
+        height: 70%;
+    }
+    .rightBox{
+        height: 70%;
+    }
+    .expiry{
+        
+        font-size: 15px;
+    }
+    .cvv{
+        font-size: 15px; 
+    }
+    .expiryBox{ 
+        width: 80%;
+        height: 30px;
+        margin-top: 10px;
+        padding-left: 10px;
+        box-shadow: greenyellow 1px 1px 1px;
+    }
+    .cvvBox{ 
+        width: 80%;
+        height: 30px;
+        margin-top: 10px;
+        padding-left: 10px;
+        box-shadow: greenyellow 1px 1px 1px;
+    }
+  }

@@ -1,0 +1,1529 @@
+:root {
+
+  --black: #130f40;
+  --light-color: #666;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+  --outline: 0.1rem solid white;
+  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar-thumb{
+  background-color: orange;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+
+/*........Start Nav bar*/
+
+.logo {
+    width: 80px;
+    height: 50px;
+}
+
+.brand {
+    font-family: Racing Sans One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: orange;
+}
+
+.brand:hover {
+    color: green;
+}
+
+.navbar {
+  background-color: transparent;
+  border-bottom: 0.5px groove transparent;
+  transition: all 0.5s linear;
+  height: 60px;
+}
+
+.navbar.scroll{
+  background-color: whitesmoke;
+  border-bottom: 0.5px groove white;
+  
+    border-bottom: 0.5px groove transparent;
+    transition: all 0.5s linear;
+}
+
+
+
+.navbuttons {
+    background-color: orange;
+}
+
+.lines1,
+.lines2,
+.lines3 {
+    width: 1.2rem;
+    height: 3px;
+    margin: 5px;
+    transition: all 0.5s;
+}
+
+.lines1.changes {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.lines2.changes {
+    opacity: 0;
+}
+
+.lines3.changes {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.menuitems {
+    color: #c7f19c;
+    border-bottom: 3px solid transparent;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.menuitems:hover {
+    color: white;
+    border-bottom: 3px solid #212529;
+}
+
+.menuitems.actives {
+    border-bottom: 3px solid #212529;
+}
+
+.icons {
+    font-size: 1.5rem;
+    color: #f4f4f4;
+    cursor: pointer;
+}
+
+.icons:hover {
+    color: orange;
+}
+
+.icons:nth-of-type(2).show {
+    color: #FFFFFF;
+}
+
+.cart-i {
+    position: relative;
+}
+
+.count {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    color: #f4f4f4;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    display: none;
+}
+
+#user {
+    display: none;
+}
+
+.logins {
+    display: none;
+}
+
+.cart-details {
+    width: 400px;
+    height: 500px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    position: absolute;
+    right: 10px;
+    top: 70px;
+    display: none;
+}
+
+.cart-details.appear {
+    display: block;
+}
+
+.cart-details i {
+    cursor: pointer;
+}
+
+.warntext {
+    color: red;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.warntext.show {
+    display: block;
+}
+
+.cart-container {
+    width: 90%;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    border-bottom: 1px groove black;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+}
+
+.buycart {
+    width: 100%;
+    height: 60px;
+    background-color: #C7F19C;
+    margin-top: 10px;
+    position: relative;
+}
+
+.cart-number {
+    width: 30px;
+    height: 30px;
+    background-color: #f5f5f5;
+}
+
+.delete {
+    color: red;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    cursor: pointer;
+}
+
+.delivery p {
+    width: 95%;
+    margin-left: 8px;
+}
+
+.proceed a {
+    color: #ffffff;
+    background-color: green;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+.profile {
+    width: 300px;
+    height: 250px;
+    background-color: #f4f4f4;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 70px;
+}
+
+.profile.show {
+    display: none;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 50%;
+    margin: 10px 0 20px 0;
+}
+
+.profile-body {
+    display: flex;
+}
+
+.exits {
+    font-size: 1.6rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+/*.........End Nav bar*/
+
+
+/*---------START HOME PAGE*/
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../resources/img/bg2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+}
+
+.home .content {
+    text-align: center;
+    width: 60rem;
+}
+
+.home .content h3 {
+    color: green;
+    font-family: Racing Sans One;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.home .content h3 span {
+    color: orange;
+}
+
+.home .content p {
+    color: green;
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.home .content .btn {
+    background-color: orange;
+    color: white;
+    margin-left: 60px;
+    font-family: Racing Sans One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    width: 200px;
+    text-align: center;
+    margin-left: -20px;
+}
+
+@media only screen and (max-width: 500px) {
+    .home .fruitCover img,
+    svg {
+        vertical-align: middle;
+        display: none;
+    }
+}
+
+
+/*---------END HOME PAGE*/
+
+
+/*----------START FEACTURES PAGES*/
+
+.features {
+  height: 600px;
+ background-image: url(../resources/img/bg4.webp);
+}
+
+.features .heading {
+  color: black;
+  font-family: Racing Sans One;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  padding-top: 50px;
+}
+
+.features .box-container {
+  display: grid;
+  width: 100vw;
+  height: 300px;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.heading span {
+    color: orange;
+    font-family: Racing Sans One;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+.features .box-container .box {
+  padding: 3rem 2rem;
+  outline: var(--outline);
+  outline-offset: -1rem;
+  text-align: center;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+  width: 350px;
+  height: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  margin: 12px;
+}
+
+.features .box-container .box:hover {
+    transform: translateY(-5px);
+    color: greenyellow;
+}
+
+.features .box-container .box img {
+    margin-left: 27%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.features .box-container .box h3 {
+    color: orange;
+    font-family: Racing Sans One;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.features .box-container .box p {
+    margin-top: 10px;
+    font-size: 12px;
+    color: black;
+    font-weight: normal;
+}
+
+.features .box-container .box .btn {
+    background-color: orange;
+    color: white;
+    margin-left: 30%;
+    width: 120px;
+    height: 70px;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+    .features .heading {
+        font-size: 40px;
+        justify-content: center;
+        margin-left: 25%;
+    }
+    .features {
+        height: 1000px;
+        flex-wrap: wrap;
+    }
+    .features .box-container {
+        width: 100vw;
+        height: 260px;
+        flex-wrap: wrap;
+    }
+}
+
+
+/*---------END FEACTURES PAGE*/
+
+
+/*---------START PRODUCT SECTION*/
+#shop{
+  background-image: url(../resources/img/veggie.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container-fluid{
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  margin-bottom: 50px;
+}
+.container-fluid .heading1 {
+  color: white;
+  font-family: Racing Sans One;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  padding-top: 50px;
+  margin-left: 40%;
+}
+
+.product-lists {
+    cursor: pointer;
+    color: orange;
+    font-family: Racing Sans One;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    padding: -20px;
+}
+
+.product-lists.actives {
+    color: #29a31d;
+}
+
+.product-item {
+  width: 200px;
+  height: 230px;
+  border: 1px groove rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+  margin-right: 1%;
+  margin-top: 3%;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  background-color: #d1f5ae;
+  border-radius: 12px;
+}
+
+.product-item:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+
+  transform: translateY(-5px);
+    
+}
+
+.product-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.product-img img {
+    width: 80%;
+    transition: all 0.3s linear;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.product-img img.hover {
+    transform: translateY(15px);
+}
+
+.product-label {
+    margin-top: 20px;
+}
+
+.product-label span:first-child {
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.product-label span:last-of-type {
+    font-size: 0.9rem;
+}
+
+.cart-button {
+    width: 100%;
+}
+
+.cart-button button {
+    width: 90%;
+    color: #ffffff;
+    background-color: green;
+    border: none;
+    padding: 12px 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    position: relative;
+    transition: 0.3s linear;
+}
+
+.cart-button button:active {
+    transform: scale(0.9);
+}
+
+@media only screen and (max-width: 500px) {
+    .container-fluid .heading1 {
+        font-size: 40px;
+        justify-content: center;
+        margin-left: 20%;
+    }
+}
+
+
+/*--------END PRODUCT SECTION*/
+
+
+/*----------START ABOUT COMPANY*/
+
+.about-reviews {
+    position: relative;
+    background-image: url(../resources/img/backGg1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.about-reviews .heading2 {
+    color: black;
+    font-family: Racing Sans One;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.about-reviews .our-company {
+    top: 50px;
+    height: 500px;
+    position: relative;
+}
+
+.about-reviews .our-company::after {
+    content: "";
+    width: 40%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-reviews .container {
+    max-width: 100%;
+    height: 380px;
+    display: flex;
+    margin-top: 30px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.left-container {
+    max-width: 35%;
+    height: 350px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.right-container {
+    width: 60%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container .quote {
+  color: green;
+  
+  margin-top: 10px;
+  font-family: Racing Sans One;
+  font-style: normal;
+  font-weight: bold;
+}
+.right-container .sentences {
+  color: #ffffff;
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 650px !important;
+  height: 100px;
+  font-family: 'Raleway',sans-serif; font-size: 18px; font-weight: 500; line-height: 32px; margin: 0 0 24px; 
+}
+
+.right-container .sentences {
+    max-width: 100%;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+    .about-reviews .heading2 {
+        font-size: 40px;
+        justify-content: center;
+        margin-left: 25%;
+    }
+    .right-container {
+        margin-left: 0px;
+        width: 100%;
+    }
+    .right-container h3 .quote {
+        padding-left: 0;
+        margin-left: 0;
+        font-size: 20px;
+    }
+    .right-container .sentences {
+        color: black;
+        padding-left: 0;
+        margin-left: 0px;
+        height: 0px;
+    }
+}
+
+
+/*-------------------  END ABOUT COMPANY*/
+
+
+/*----------------START REVIEW PAGE*/
+
+.reviewSection {
+  margin-top: 50px;
+  position: relative;
+  
+  z-index: 1;
+  width: 100vw;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../resources/img/bg3.webp);
+  background-size: cover;
+}
+.reviewSection .section-title .heading3{
+  color: white;
+  font-family: Racing Sans One;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.reviewSection .section-title .heading3 {
+    color: black;
+    font-family: Racing Sans One;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.section-title {
+    float: left;
+    position: relative;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.section-title h2 {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: green;
+    font-size: 34px;
+    font-weight: 800;
+    position: relative;
+}
+
+.section-separator {
+    float: left;
+    width: 100%;
+    position: relative;
+    margin: 20px 0;
+}
+
+.section-separator:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 3px;
+    width: 50px;
+    border-radius: 3px;
+    z-index: 2;
+    background-color: green;
+    margin-left: -25px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.listing-carousel-button {
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -25px;
+    z-index: 100;
+    cursor: pointer;
+    background: orange;
+    box-shadow: 0 9px 26px rgba(58, 87, 135, 0.45);
+    transition: all 200ms linear;
+    outline: none;
+}
+
+.listing-carousel-button.listing-carousel-button-next {
+    right: 30px;
+    padding-right: 20px;
+    border-radius: 60px 0 0 60px;
+}
+
+.listing-carousel-button.listing-carousel-button-prev {
+    left: -10px;
+    padding-left: 20px;
+    border-radius: 0 60px 60px 0;
+}
+
+.listing-carousel-button.listing-carousel-button-next:hover {
+    right: -15px;
+    background: rgba(6, 27, 65, 0.4);
+}
+
+.listing-carousel-button.listing-carousel-button-prev:hover {
+    left: -15px;
+    background: rgba(6, 27, 65, 0.4);
+}
+
+.testi-item {
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.9);
+    opacity: 0.9;
+}
+
+.testimonials-text {
+    padding: 75px 50px 75px;
+    overflow: hidden;
+    background: #d1f5ae;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.testimonials-text-after {
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    color: #ccc;
+    opacity: 0.3;
+    font-size: 35px;
+    transition: all 400ms linear;
+    bottom: 25px;
+    right: 30px;
+}
+
+.testimonials-text-before {
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    color: #ccc;
+    opacity: 0.3;
+    font-size: 35px;
+    transition: all 400ms linear;
+    top: 25px;
+    left: 30px;
+    height: 4%;
+}
+
+.testimonials-text .listing-rating {
+    float: none;
+    display: inline-block;
+    margin-bottom: 12px;
+    height: 4%;
+}
+
+.listing-rating i {
+    color: orange;
+}
+
+.testimonials-text h3 {
+    font-weight: 600;
+    color: orange;
+    font-size: 20px;
+}
+
+.testimonials-text p {
+    color: black;
+}
+
+.testimonials-carousel .swiper-slide {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.testi-avatar {
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    width: 90px;
+    height: 90px;
+    margin-left: -45px;
+    z-index: 20;
+}
+
+.testi-avatar img {
+    width: 90px;
+    height: 90px;
+    float: left;
+    border-radius: 100%;
+    border: 6px solid #fff;
+    box-shadow: 0 9px 26px rgba(58, 87, 135, 0.1);
+}
+
+.swiper-slide-active .testimonials-text {
+    background: #fff;
+    box-shadow: 0 9px 26px rgba(58, 87, 135, 0.1);
+}
+
+.testimonials-text p {
+    color: #878c9f;
+    font-size: 14px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    line-height: 24px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.text-link {
+    position: absolute;
+    bottom: 0;
+    padding: 15px 0;
+    border-radius: 10px 10px 0 0;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.03);
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+}
+
+.swiper-slide-active .testi-item {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.tc-pagination {
+    float: left;
+    margin-top: 10px;
+    width: 100% !important;
+}
+
+.tc-pagination_wrap {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+}
+
+.tc-pagination2 {
+    float: none;
+    display: inline-block;
+    padding: 14px 0;
+    background: #fff;
+    border-radius: 30px;
+    min-width: 250px;
+    border-bottom: 0;
+}
+
+.tc-pagination .swiper-pagination-bullet,
+.tc-pagination2.swiper-pagination-bullet {
+    opacity: 1;
+    background: green;
+    margin: 0 2px;
+    width: 10px;
+    height: 10px;
+    transition: all 300ms ease-in-out;
+}
+
+@media only screen and (max-width: 500px) {
+    .reviewSection .section-title .heading3 {
+        font-size: 40px;
+        justify-content: center;
+        margin-left: 10%;
+    }
+    .right-container .quote {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .right-container .sentences {
+        color: black;
+        margin-top: 20px;
+        margin-left: 0px;
+        width: 90%;
+        height: 0;
+        font-size: 10px;
+        padding-left: 20px;
+    }
+}
+
+
+/*---------------END REVIEW BOX*/
+
+
+/*......................START CUSTOMER LOGIN PAGE .....................................  */
+
+.userlogin {
+  height: 100vh;
+  background-image: url(../resources/img/background1.png);
+  background-repeat: no-repeat;
+  /*background-size: fit;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.userlogin .container {
+    width: 60%;
+    height: 75vh;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Start first Container */
+
+.container-first {
+    width: 60%;
+    height: 100%;
+    color: #2e2f2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+.container-first.sign {
+    width: 40%;
+    color: #f4f4f4;
+    z-index: 3;
+}
+
+.container-first>* {
+    text-align: center;
+}
+
+.container-first.login {
+    width: 100%;
+}
+
+
+/* End first Container */
+
+
+/* Start Second Container */
+
+.container-second {
+  width: 40%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+ 
+}
+
+.container-second.sign {
+    width: 60%;
+    z-index: 0;
+}
+
+.container-second>* {
+    text-align: center;
+}
+
+
+/* End Second Container */
+
+.signup {
+    display: none;
+}
+
+.login {
+    display: block;
+}
+
+.header {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #FFA500;
+  margin: 6% 0;
+}
+
+.connect-link {
+    margin-bottom: 10px;
+}
+
+.connect-link .link-icon:first-child {
+    margin-left: 23px;
+}
+
+.connect-link .link-icon>* {
+    font-size: 2rem;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.connect-link p {
+    color: #777;
+}
+
+
+/* Start Form  */
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.data-input {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.placeholder {
+    font-size: 1.2rem;
+    color: #444;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    padding-left: 35px;
+    outline: none;
+}
+
+#loginuseremail.fill,
+#loginPassword.fill,
+#singupemail.fill,
+#cfpwd.fill {
+    border: 3px solid red;
+}
+
+.eye {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.eye>* {
+    color: #888;
+    cursor: pointer;
+    display: block;
+}
+
+.eye .fa-eye.active {
+    display: none;
+}
+
+.eye .fa-eye-slash.active {
+    display: none;
+}
+
+.forgot {
+    color: blue;
+    margin-bottom: 20px;
+}
+
+.button {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    background-color: #29a31d;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* End Form  */
+
+.welcome-header {
+    color: #f4f4f4;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.welcome-body {
+    color: #f4f4f4;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.signtoggle,
+.logintoggle {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: #f4f4f4;
+    display: inline;
+    border: 1px solid #f4f4f4;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+/* Start layer  Green*/
+
+.overlayer-green {
+    width: 40%;
+    height: 100%;
+    background-color: #29a31d;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.overlayer-green.ani {
+    animation: overlayer 1s linear 1 forwards;
+}
+
+@keyframes overlayer {
+    0% {
+        right: 0;
+    }
+    50% {
+        width: 45%;
+    }
+    100% {
+        right: 60%;
+    }
+}
+
+.overlayer-green.anirev {
+    animation: overlayerrev 1s linear 1 forwards;
+}
+
+@keyframes overlayerrev {
+    0% {
+        right: 60%;
+    }
+    50% {
+        width: 45%;
+    }
+    100% {
+        right: 0%;
+    }
+}
+
+
+/* End layer */
+
+
+/* Start Layer White  */
+
+.overlayer-white {
+    display: none;
+}
+
+.overlayer-white2 {
+    display: none;
+}
+
+.overlayer-white.active {
+    display: block;
+    width: 60%;
+    height: 100%;
+    background-color: #f4f4f4;
+    /* background-color: red; */
+    position: absolute;
+    top: 0;
+    left: 40%;
+    z-index: 1;
+}
+
+.overlayer-white2.active {
+    display: block;
+    width: 60%;
+    height: 100%;
+    background-color: #f4f4f4;
+    /* background-color: red; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.overlayer-white.active.ani {
+    animation: overlayerwhite 1.5s linear 1 forwards;
+}
+
+.overlayer-white2.active.ani {
+    animation: overlayerwhite2 1.5s linear 1 forwards;
+}
+
+@keyframes overlayerwhite {
+    0% {
+        left: 40%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes overlayerwhite2 {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -60%;
+    }
+}
+
+
+/* End Layer White  */
+
+
+/* start forgot container  */
+
+.forgot-container {
+    width: 600px;
+    height: 300px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.forgot-container.show,
+.forgot-form.show,
+.recovery-form.show {
+    display: none;
+}
+
+.fbutton {
+    width: 100%;
+}
+
+.delrecovery{
+    color: red;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* end forgot container  */
+
+
+/*......................END CUSTOMER LOGIN PAGE .....................................  */
+
+
+/*...............START FOOTER SECTION*/
+
+.about-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../resources/img/footer.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.endSection {
+  width: 95vw;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.about-section .company {
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+.about-section .company h4 {
+    font-family: Racing Sans One;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.about-section .company1 {
+    padding-top: 10px;
+    margin-left: 50px;
+    font-weight: 500;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-section .company1 h4 {
+    font-family: Racing Sans One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: black;
+}
+
+.about-section .company1 p {
+    font-family: Racing Sans One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: white;
+}
+
+.about-section .clickBtn {
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: orange;
+    color: black;
+    margin-left: 80px;
+}
+
+.about-section a {
+    transition: all 0.5s;
+}
+
+.about-section a:hover {
+    color: #C7F19C;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.address>* {
+    margin-bottom: 10px;
+}
+
+.address i {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 13px;
+}
+
+.address a {
+    color: #f4f4f4;
+    font-size: 0.9rem;
+}
+
+.about-link>* {
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 10px;
+    color: white;
+}
+
+footer {
+    color: #ffffff;
+}
+
+
+/*..............END FOOTER SECTION */
+
+@media only screen and (max-width: 500px) {
+    .services-groups {
+        flex-direction: column;
+    }
+    .service-labels p {
+        font-size: 0.9rem;
+    }
+    .service-labels span {
+        font-size: 0.6rem;
+    }
+    .endSection {
+        width: 100vw;
+        height: 600px;
+        border-radius: 0px;
+        display: flex;
+        margin-top: 0px;
+        margin-left: 0px;
+        flex-direction: column;
+    }
+    .address {
+        width: 100vw;
+        height: 70px;
+        font-size: 20px;
+        margin: 0;
+    }
+    .about-link>* {
+        width: 100vw;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        margin-left: 20px;
+    }
+    .about-section a {
+        display: inline;
+    }
+    .about-section .company1 {
+        padding-top: 5px;
+        padding-left: 2px;
+        margin-left: 0px;
+        color: black;
+        font-weight: 500;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .about-section .company {
+        padding-top: 5px;
+        padding-left: 2px;
+    }
+    .about-section .company1 p {
+        width: 90%;
+        height: 100px;
+        padding-left: 20px;
+    }
+}
+
+
+/*..............END FOOTER SECTION */
+
+
+/*............................END MAIN PAGE ........................................ */

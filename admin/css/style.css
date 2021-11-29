@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Prompt:wght@300&display=swap');
+
+body{
+    font-family: 'Montserrat',sans-serif;
+    background-color: #eee;
+    overflow-x: hidden;
+    margin:0;
+    padding:0;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+.sidebars{
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),url(../img/Organic-fraud-cover-art.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 5px 0 25px #999;
+}
+
+
+
+.borderbottoms{
+    border-bottom: 1px groove #eee;
+}
+
+
+
+
+
+.currents{
+    background-color: #41337A;
+    border-radius: 7px;
+    box-shadow: 2px 5px 10px #111;
+    transition: all 0.3s;
+}
+
+.currents:hover{
+    background-color:#275DAD ;
+    box-shadow: 2px 5px 20px #111;
+    transform: translateY(-1px);
+}
+.sidebarlinks{
+    transition: all 0.4s;
+}
+
+.sidebarlinks:hover{
+    background-color: #ABA9C3;
+    border-radius: 7px;
+    /* cursor: pointer; */
+}
+
+.backgroundtop{
+    background-color: #FCF7F8;
+}
+
+#search1{
+    border-radius: 20px;
+    width: 200px;
+    box-shadow: 2px 2px 5px #333;
+}
+
+
+
+#search2{
+    border-radius: 20px;
+    width: 200px;
+    box-shadow: 2px 2px 5px #333;
+}
+
+
+#search3{
+    border-radius: 20px;
+    width: 200px;
+    box-shadow: 2px 2px 5px #333;
+}
+
+
+
+#search1:focus + .btn{
+    display: none;
+}
+
+
+#search2:focus + .btn{
+    display: none;
+}
+
+
+#search3:focus + .btn{
+    display: none;
+}
+
+
+::-webkit-input-placeholder{
+    text-align: center;
+}
+
+.icons{
+    position: absolute;
+    top: 26px;
+    left: 50px;
+}
+
+.mt{
+    margin-left: 20px;
+    padding: 5px 30px 5px 30px ;
+    cursor: pointer;
+    border: 2px solid #eee;
+    box-shadow: 2px 2px 4px #333;
+}
+
+.texts{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;;
+}
+
+.icon2{
+    padding-left: 10px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+
+.card.cardcommons{
+   border-radius: 30px;
+   cursor: pointer; 
+}
+
+.baricon1{
+    font-size: 35px;
+    padding: 10px;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 15px;
+    background-color: blue;
+    width: 80px;
+    height: 60px;
+    cursor: pointer; 
+}
+
+
+.baricon2{
+    font-size: 35px;
+    padding: 10px;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 15px;
+    background-color: #533A7B;
+    width: 80px;
+    height: 60px;
+    cursor: pointer; 
+
+}
+
+
+
+
+.baricon3{
+    font-size: 35px;
+    padding: 10px;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 15px;
+    background-color: #DB5461;
+    width: 80px;
+    height: 60px;
+    cursor: pointer; 
+
+}
+
+
+.baricon4{
+    font-size: 35px;
+    padding: 10px;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 15px;
+    background-color: #26547C;
+    width: 80px;
+    height: 60px;
+    cursor: pointer; 
+
+}
+.tags{
+      margin-left: 25px;  
+}
+
+.tags1,.tags2{
+    margin-left: 35px;
+}
+
+.tagmoney{
+    font-size: 16px;
+    color: #6969B3;
+    font-weight: bold;
+}
+.tagcontact{
+    font-size: 13px;
+    font-weight: lighter;
+    
+}
+
+.tagcontact1{
+    font-size: 15px;
+    font-weight: lighter;
+    
+}
+
+.card-title{
+    font-size: 16px;
+    color: #0D2149;
+    font-weight: bold;
+}
+
+.btn1{
+    
+    background: teal ;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.btn2{
+    background: slategray;
+    color: white;
+    cursor: pointer;
+}
+
+
+.btns{
+    background: #3EC300;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.pluss{
+    color: white;
+    font-size: 12px;
+    padding: 0 5px 0 5px;
+}
+.cards{
+    width: 1150px;
+}
+
+.tablescolor{
+    background-color: #343CF2;
+    color : #FFF;
+    font-weight: bold;
+}
+
+#table2{
+    width: 1080px;
+}
+.tablescolor2{
+    background-color:#BC68FF;
+    color: white;
+    font-weight: bold;
+}
+
+.seemorebtns{
+    background-color: #343CF2;
+    font-size: 15px;
+    color: whitesmoke;
+    transition: all ease;
+}
+
+.seemorebtns:hover{
+    transform: translateY(-1px);
+}
+
+
+.seemorebtns2{
+    background-color:#BC68FF;
+    font-size: 15px;
+    color: whitesmoke;
+    transition: all ease;
+}
+
+.seemorebtns2:hover{
+    transform: translateY(-1px);
+}
+
+.fontsizes{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.fontsizes2{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.fontsizes3{
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Product Card bg */
+
+.cardbgs{
+    background: #C4DACF;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease;
+}
+
+
+.cardbgs:hover{
+  
+    transform:scale(1.1);
+}
+
+
+.imgs{
+    background: transparent;
+    border: none;
+    margin-bottom: 10px;
+}
+
+
+
+/* Elips Dropdown */
+
+.ellpisicon{
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btnedit{
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+}
+
+.btndelete{
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+}
+
+
+.form-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 500px;
+    height: 350px;
+    padding: 50px;
+    border-radius: 30px;
+    background: green;
+    box-shadow : 3px 3px 4px black;
+}

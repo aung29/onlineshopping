@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f9f9f9;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+div{
+    width: 400px;
+    background-color: red;
+    color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.maintenance{
+    width: 130px;
+}
+
+p{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
