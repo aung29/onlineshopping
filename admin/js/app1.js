@@ -235,7 +235,7 @@ $(document).ready(function(){
               <td>${iterator.phone}</td>
               <td>${rating2}</td>
               <td>${iterator.feedback}</td>
-              <td>${iterator.create_datae}</td>
+              <td>${iterator.create_date}</td>
               </tr>
             
           

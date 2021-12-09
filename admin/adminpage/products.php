@@ -208,7 +208,7 @@
 
         <!-- Start Signout Modal -->
 
-	<div id="signout" class="modal">
+        <div id="signout" class="modal">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
